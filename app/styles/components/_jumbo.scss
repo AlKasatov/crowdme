@@ -1,19 +1,68 @@
 .jumbo {
+    padding-top: 170px;
+    position: relative;
+    color: #fff;
     min-height: 570px;
     background-image: url('../img/house.png');
     background-repeat: no-repeat;
     background-size: cover;
     &__title {
-        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px 5px #555;
+        @include opensans(50px,
+        600,
+        77px);
     }
-    &__subtitle {}
-    &__button {}
+    &__subtitle {
+        text-align: center;
+        text-shadow: 2px 2px 5px #111;
+        @include opensans(36px,
+        400,
+        77px);
+    }
+    &__button {
+        margin: 50px auto;
+    }
     &__arrow {
-        &--left {}
-        &--right {}
+        height: 20px;
+        width: 13px;
+        position: absolute;
+        background-image: url('../img/arrow.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 85%;
+        transition: transform .4s;
+        cursor: pointer;
+        &--left {
+            transform: scale(-1, 1);
+            right: 14%;
+            &:hover {
+                transform: scale(-1.2, 1.2);
+            }
+        }
+        &--right {
+            right: 10%;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
     }
 }
 
 .button {
-    &--big {}
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    &--big {
+        border-radius: 15px;
+        font-size: 20px;
+        line-height: 77px;
+        background-color: $prim;
+        width: 250px;
+        cursor: pointer;
+        &:hover {
+            text-shadow: 2px 5px 5px #222;
+            background-color: transparent;
+            backdrop-filter: blur(15px);
+        }
+    }
 }

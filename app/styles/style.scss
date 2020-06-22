@@ -32,3 +32,14 @@ $sec:#26a6d1;
 
 @import 'components/_header.scss';
 @import 'components/_jumbo.scss';
+@keyframes pulse {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1)
+    }
+}

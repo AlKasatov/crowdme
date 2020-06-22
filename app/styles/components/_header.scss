@@ -13,11 +13,24 @@
         position: relative;
         margin-right: 125px;
         margin-left: 10px;
+        @media screen and (max-width: 1050px) {
+            margin-right: 25px;
+        }
+        @media screen and (max-width: 930px) {
+            margin-left: 70px;
+        }
         &-img {
             position: absolute;
             left: 0;
             top: 12%;
             width: 40px;
+            @media screen and (max-width: 930px) {
+                animation: pulse 1s infinite;
+                cursor: pointer;
+            }
+            &--opened {
+                transform: rotate(90deg);
+            }
         }
         &-title {
             @include nunito(2em, 400, 77px);
@@ -47,15 +60,34 @@
 }
 
 .mainmenu {
+    @media screen and (max-width: 930px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 300px;
+        width: 100%;
+        z-index: 5;
+    }
     &__item {
         color: #666666;
         @include opensans(13px, 600, 86px);
         float: left;
         margin-right: 30px;
+        @media screen and (max-width: 930px) {
+            float: none;
+            @include opensans(40px, 700, 40px);
+            padding: 10px;
+            background-color: $prim;
+            margin-right: 0px;
+            border-bottom: 1px solid #fff;
+        }
     }
     &__link {
         &:visited {
             color: #666666;
+            @media screen and (max-width: 930px) {
+                color: #fff;
+            }
         }
     }
 }
