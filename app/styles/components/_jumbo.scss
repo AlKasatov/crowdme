@@ -3,7 +3,9 @@
     background-image: url('../img/house.png');
     background-repeat: no-repeat;
     background-size: cover;
-    &__title {}
+    &__title {
+        color: #fff;
+    }
     &__subtitle {}
     &__button {}
     &__arrow {
