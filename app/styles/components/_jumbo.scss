@@ -1,0 +1,17 @@
+.jumbo {
+    min-height: 570px;
+    background-image: url('../img/house.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__title {}
+    &__subtitle {}
+    &__button {}
+    &__arrow {
+        &--left {}
+        &--right {}
+    }
+}
+
+.button {
+    &--big {}
+}

@@ -1,0 +1,34 @@
+@import 'components/_norm';
+$prim:#8fc63d;
+$sec:#26a6d1;
+.clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin montserrat($size, $weight, $lineHeight) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+@mixin opensans($size, $weight, $lineHeight) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+@mixin nunito($size, $weight, $lineHeight) {
+    font-family: 'Nunito', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+@import 'components/_header.scss';
+@import 'components/_jumbo.scss';

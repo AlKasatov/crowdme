@@ -1,0 +1,63 @@
+.header {
+    max-width: 1045px;
+    height: 86px;
+    background-color: #fff;
+    margin: 0 auto;
+    text-transform: uppercase;
+    position: relative;
+    &__logo {
+        width: 220px;
+        height: 86px;
+        float: left;
+        height: 100%;
+        position: relative;
+        margin-right: 125px;
+        margin-left: 10px;
+        &-img {
+            position: absolute;
+            left: 0;
+            top: 12%;
+            width: 40px;
+        }
+        &-title {
+            @include nunito(2em, 400, 77px);
+            color: #6d6e70;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__mainmenu {
+        float: left;
+    }
+    &__button {
+        padding: 10px 35px;
+        border-radius: 18%/50%;
+        color: #fff;
+        @include opensans(13px, 600, normal);
+        background-color: $prim;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}
+
+.mainmenu {
+    &__item {
+        color: #666666;
+        @include opensans(13px, 600, 86px);
+        float: left;
+        margin-right: 30px;
+    }
+    &__link {
+        &:visited {
+            color: #666666;
+        }
+    }
+}
+
+.mainmenu_box {}
