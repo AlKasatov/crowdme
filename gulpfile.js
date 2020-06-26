@@ -3,7 +3,9 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     rig = require('gulp-rigger'),
     bs = require('browser-sync').create(),
-    del = require('del');
+    del = require('del'),
+    imin = require('gulp-imagemin');
+
 
 gulp.task('bsync', function () {
     bs.init({
@@ -34,6 +36,7 @@ gulp.task('js', function () {
 
 gulp.task('img', function () {
     return gulp.src('app/img/**/*.*')
+        .pipe(imin())
         .pipe(gulp.dest('dist/img/'));
 })
 

@@ -3,20 +3,20 @@
     position: relative;
     color: #fff;
     min-height: 570px;
-    background-image: url('../img/house.png');
+    background-image: linear-gradient( rgba(10, 30, 10, .2), rgba(30, 20, 10, .3)), url('../img/house.png');
     background-repeat: no-repeat;
     background-size: cover;
     &__title {
         text-align: center;
         text-shadow: 2px 2px 5px #555;
-        @include opensans(50px,
+        @include opensans(3.1rem,
         600,
         77px);
     }
     &__subtitle {
         text-align: center;
         text-shadow: 2px 2px 5px #111;
-        @include opensans(36px,
+        @include opensans(2.2rem,
         400,
         77px);
     }
@@ -59,10 +59,10 @@
         background-color: $prim;
         width: 250px;
         cursor: pointer;
+        transition: text-shadow .6s, box-shadow .4s;
         &:hover {
-            text-shadow: 2px 5px 5px #222;
-            background-color: transparent;
-            backdrop-filter: blur(15px);
+            text-shadow: 2px 2px 2px #222;
+            box-shadow: inset 2px 2px 15px 0px rgba(0, 0, 0, 0.3);
         }
     }
 }
