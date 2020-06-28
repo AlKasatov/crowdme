@@ -1,11 +1,17 @@
 .jumbo {
     padding-top: 170px;
+    padding-bottom: 10px;
     position: relative;
     color: #fff;
     min-height: 570px;
     background-image: linear-gradient( rgba(10, 30, 10, .2), rgba(30, 20, 10, .3)), url('../img/house.png');
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and(max-width: 650px) {
+        padding-top: 10px;
+        min-height: 350px;
+    }
     &__title {
         text-align: center;
         text-shadow: 2px 2px 5px #555;
@@ -22,6 +28,9 @@
     }
     &__button {
         margin: 50px auto;
+        @media screen and(max-width: 650px) {
+            margin: 10px auto;
+        }
     }
     &__arrow {
         height: 20px;
@@ -33,11 +42,17 @@
         top: 85%;
         transition: transform .4s;
         cursor: pointer;
+        @media screen and(max-width: 550px) {
+            display: none;
+        }
         &--left {
             transform: scale(-1, 1);
             right: 14%;
             &:hover {
                 transform: scale(-1.2, 1.2);
+            }
+            @media screen and(max-width: 1200px) {
+                left: 10%;
             }
         }
         &--right {
@@ -52,17 +67,30 @@
 .button {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: text-shadow .6s, box-shadow .4s;
+    &:hover {
+        text-shadow: 2px 2px 2px #222;
+        box-shadow: inset 2px 2px 15px 0px rgba(0, 0, 0, 0.3);
+    }
     &--big {
         border-radius: 15px;
         font-size: 20px;
         line-height: 77px;
-        background-color: $prim;
         width: 250px;
-        cursor: pointer;
-        transition: text-shadow .6s, box-shadow .4s;
-        &:hover {
-            text-shadow: 2px 2px 2px #222;
-            box-shadow: inset 2px 2px 15px 0px rgba(0, 0, 0, 0.3);
-        }
+    }
+    &--small {
+        width: 190px;
+        line-height: 50px;
+        border-radius: 5px;
+    }
+    &--transparent {
+        background-color: transparent;
+    }
+    &--prim {
+        background-color: $prim;
+    }
+    &--casual {
+        background-color: #26a6d1;
     }
 }

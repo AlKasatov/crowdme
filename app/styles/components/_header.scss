@@ -19,6 +19,9 @@
         @media screen and (max-width: 930px) {
             margin-left: 70px;
         }
+        @media screen and (max-width: 550px) {
+            margin-left: 10px;
+        }
         &-img {
             fill: black;
             position: absolute;
@@ -65,6 +68,9 @@
         &:hover {
             text-shadow: 2px 2px 2px #222;
             box-shadow: inset 2px 2px 15px 0px rgba(0, 0, 0, 0.3);
+        }
+        @media screen and (max-width: 550px) {
+            padding: 20px 10px;
         }
     }
 }

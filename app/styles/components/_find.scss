@@ -1,0 +1,44 @@
+.find {
+    background: linear-gradient(to right, #e2f8ff 0%, #e2f8ff 50%, #f5f9eb 50%, #f5f9eb 100%);
+    @media screen and (max-width: 1020px) {
+        background: linear-gradient(to bottom, #e2f8ff 0%, #e2f8ff 50%, #f5f9eb 50%, #f5f9eb 100%);
+    }
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 1035px;
+        padding-bottom: 40px;
+    }
+    &__item {
+        padding: 30px 20px 90px;
+        position: relative;
+        width: 50%;
+        float: left;
+        @media screen and (max-width: 1020px) {
+            float: none;
+            width: 100%;
+        }
+    }
+    &__item-imgbox {
+        float: left;
+        width: 150px;
+        height: 150px;
+    }
+    &__item-img {
+        object-fit: fill;
+    }
+    &__item-title {
+        text-transform: capitalize;
+    }
+    &__item-text {
+        overflow: hidden;
+    }
+    &__item-button {
+        // position: absolute;
+        // bottom: 20px;
+        // left: 50%;
+        // transform: translateX(-50%);
+        clear: both;
+        color: #fff;
+        margin: 0 auto;
+    }
+}
